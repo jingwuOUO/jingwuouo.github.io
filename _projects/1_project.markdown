@@ -20,9 +20,15 @@ I extended a classic monocular visual odometry called semi-direct visual odometr
 
 <div class="row center">
     <div style="text-aligh:center;">
-        <iframe width="800" height="480" src="http://www.youtube.com/embed/hWU_P3U6o9g?rel=0"  frameborder="0" ></iframe>
+        <!-- <iframe width="800" height="480" src="http://www.youtube.com/embed/hWU_P3U6o9g?rel=0"  frameborder="0" ></iframe> -->
+        <iframe src="https://www.youtube.com/embed/hWU_P3U6o9g" width="800" height="480" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
     </div>
 </div>
+<!-- <div class="row center">
+    <div style="text-aligh:center;">
+    <class="ytp-menuitem" target="_blank" role="menuitem" href="https://support.google.com/youtube/?p=report_playback"><div class="ytp-menuitem-icon"></div>
+    </div>
+</div> -->
 <div class="caption">
     Demo
 </div>
