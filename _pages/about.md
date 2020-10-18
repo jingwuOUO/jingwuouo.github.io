@@ -8,7 +8,7 @@ profile:
   align: right
   image: self5.jpg
   address: >
-    <p>Atlanta, GA, 30339</p>
+    <p>Atlanta, GA, US, 30339</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
