@@ -17,7 +17,7 @@ social: true  # includes social icons at the bottom of the page
 
 Hi, I'm Jing Wu, a second year master student in Georgia Institute of Technology. 
 
-My interests mainly focus on Simultaneous Localization and Lapping (SLAM), Structure from Motion (SLAM), Computer Vision (CV), and Perception in Robotics.
+My interests mainly focus on Simultaneous Localization and Lapping (SLAM), Structure from Motion (SFM), Computer Vision (CV), and Perception in Robotics.
 
 My major language in programming is C++ and Python.
 
