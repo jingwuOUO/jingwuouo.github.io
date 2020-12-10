@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Jing  Wu | Jing Wu</title>
+<title>Jing  Wu | Shonan Rotation Averaging</title>
 <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 ">
 
@@ -29,7 +29,7 @@
 <link rel="shortcut icon" href="/assets/img/favicon.ico">
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<link rel="canonical" href="/blog/">
+<link rel="canonical" href="/projects/2_project/">
 
 <!-- Theming-->
 
@@ -74,7 +74,7 @@
           </li>
           
           <!-- Blog -->
-          <li class="nav-item active">
+          <li class="nav-item ">
             <a class="nav-link" href="/blog/">
               blog
               
@@ -133,18 +133,44 @@
     <div class="container mt-5">
       <div class="post">
 
-  <div class="header-bar">
-    <h1>Jing</h1>
-    <h2>Jing's Blog</h2>
-  </div>
+  <header class="post-header">
+    <h1 class="post-title">Shonan Rotation Averaging</h1>
+    <p class="post-description">A fast, simple, and elegant rotation averaging algorithm guaranteed to recover globally optimal solutions under mild assumptions on the measurement noise.</p>
+  </header>
 
+  <article>
+    <p>Shonan Rotation Averaging is a fast, simple, and elegant rotation averaging algorithm that is guaranteed to recover globally optimal solutions under mild assumptions on the measurement noise. Our method employs semidefinite relaxation in order to recover provably globally optimal solutions of the rotation averaging problem. In contrast to prior work, we show how to solve large-scale instances of these relaxations using manifold minimization on (only slightly) higher-dimensional rotation manifolds, re-using existing high-performance (but local) structure-from-motion pipelines. Our method thus preserves the speed and scalability of current SFM methods, while recovering globally optimal solutions. You can watch the ECCV 2020 spotlight video by <a href="https://dellaert.github.io/ShonanAveraging/">Frank Dellaert</a> and read our <a href="https://arxiv.org/abs/2008.02737">paper</a> to know more about Shonan.</p>
 
-  <ul class="post-list">
-    
-  </ul>
+<h3 id="experiment-platform">Experiment platform</h3>
 
-  
+<p>In this project, I used <a href="https://www.comet.ml/site/">comet</a> platform to record all experiments I did with Shonan algorithm. It provides a self-hosted and could-based platform and makes it much easier for you or the team to track, compare, explain and optimize experiments.</p>
 
+<p>
+After import Comet in python environment, I use it as the hook function in Pytorch so that it will automitically logs the data, parameter and anything you want and save the experiment on cloud. If the experiment view is set already, each time after the code stops running, you can already see the experiment results without any extra work. For Shonan algorithm, there are lots of parameters we want to study, thus this playform is extremely helpful to analyze the results. 
+</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded mx-auto d-block" src="/assets/img/projects/shonan.jpg" alt="" title="example image" />
+    </div>
+</div>
+<div class="caption">
+    Comparison between Shonan, Block Descent and Levenberg-Marquardt algorithm
+</div>
+
+<p>In the chart above, LM represents for Levenberg-Marquart method, BD represents block-coordinate descent method by <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Eriksson_Rotation_Averaging_and_CVPR_2018_paper.pdf">Anders Eriksson</a>, SA, SK, SL represent Shonan with different parameters. The y-axis is the Frobenius error during optimization and the x-axis is the duration time for this method.</p>
+
+<p>All the methods are given the same randomly initialized estimation, Shonan is the fastest-converged method which also has the minimal error, and then BD method. LM is the slowest method.</p>
+
+<h3 id="my-code-part">My code (part)</h3>
+
+<p><a href="https://github.com/borglab/gtsam/blob/develop/gtsam/sfm/ShonanAveraging.cpp"> ShonanRotationAveraging.cpp</a></p>
+
+<p><a href="https://github.com/borglab/gtsam/blob/develop/gtsam/sfm/ShonanAveraging.h"> ShonanRotationAveraging.h</a></p>
+
+<p><a href="https://github.com/borglab/gtsam/pull/533"> Power Method to compute minimum eigenpair. (PR)</a></p>
+
+  </article>
 
 </div>
 
