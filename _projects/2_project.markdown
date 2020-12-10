@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Shonan Rotation Averaging Global Optimality by Surfing SO(p)^n
+title: Shonan Rotation Averaging
 description: A fast, simple, and elegant rotation averaging algorithm guaranteed to recover globally optimal solutions under mild assumptions on the measurement noise.
 img: /assets/img/projects/shonan.jpg
 github: https://github.com/borglab/gtsam
@@ -26,7 +26,16 @@ After import Comet in python environment, I use it as the hook function in Pytor
     Comparison between Shonan, Block Descent and Levenberg-Marquardt algorithm
 </div>
 
-In the chart above, LM represents for Levenberg-Marquart method, BD represents block-coordinate descent method by <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Eriksson_Rotation_Averaging_and_CVPR_2018_paper.pdf">Anders Eriksson</a>, SA, SK, SL represent Shonan with different parameters. All the methods are given the same randomly initialized estimation, Shonan is the fastest-converged method which also has the minimal error, and then BD method. LM is the slowest method.
+In the chart above, LM represents for Levenberg-Marquart method, BD represents block-coordinate descent method by <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Eriksson_Rotation_Averaging_and_CVPR_2018_paper.pdf">Anders Eriksson</a>, SA, SK, SL represent Shonan with different parameters. The y-axis is the Frobenius error during optimization and the x-axis is the duration time for this method.
+
+All the methods are given the same randomly initialized estimation, Shonan is the fastest-converged method which also has the minimal error, and then BD method. LM is the slowest method.
+
+### My code (part)
+
+<a href="https://github.com/borglab/gtsam/blob/develop/gtsam/sfm/ShonanAveraging.cpp"> ShonanRotationAveraging.cpp</a>
 
 
+<a href="https://github.com/borglab/gtsam/blob/develop/gtsam/sfm/ShonanAveraging.h"> ShonanRotationAveraging.h</a>
 
+
+<a href="https://github.com/borglab/gtsam/pull/533"> Power Method to compute minimum eigenpair. (PR)</a>

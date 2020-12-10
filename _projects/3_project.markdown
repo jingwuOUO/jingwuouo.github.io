@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Designed a robotic handwriting system
-description: A fast, simple, and elegant rotation averaging algorithm guaranteed to recover globally optimal solutions under mild assumptions on the measurement noise.
+title: robotic handwriting system
+description: Design a robot learning system to capture human's handwriting trajectories (demonstration) and learn from them(using DMP algorithm) in order to create its own handwriting trajectories. 
 img: /assets/img/projects/robot_writing.jpg
 github: https://github.com/jingwuOUO/dmp_writing
 importance: 3

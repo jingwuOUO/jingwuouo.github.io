@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Visual SLAM on Unmanned Aerial Vehicle in indoor environment
-description: Extended Semi-direct Visual Odometry (SVO)
+title: Visual SLAM on Unmanned Aerial Vehicle
+description: Extended Semi-direct Visual Odometry (SVO) by combining direct method and feature-based method in pose estimation and implemented Extended Kalman Filter (EKF) to improve the accuracy of pose estimation.
 img: /assets/img/projects/vo.jpg
 importance: 1
 ---
